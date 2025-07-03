@@ -76,7 +76,7 @@ string name = Console.ReadLine(); // Kullanıcıdan isim değeri alınır.
 
 string editName(string ad)
 {
-    ad = char.ToUpper(ad[0]) + ad.Substring(1).ToLower();
+    ad = char.ToUpper(ad[0]) + ad.Substring(1).ToLower(); // İlk harfi büyük geri kalan küçük olan kod.
 
     return ad;
  
@@ -107,7 +107,7 @@ int enBuyuk(int x, int y)
 Console.WriteLine(enBuyuk(10,20));
 Console.WriteLine(enBuyuk(30, 20));
 Console.WriteLine(enBuyuk(10, 10));
-Console.WriteLine(enBuyuk(10, 15));
+
 
 
 
