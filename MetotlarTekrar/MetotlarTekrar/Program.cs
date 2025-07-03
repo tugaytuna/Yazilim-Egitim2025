@@ -106,7 +106,7 @@ int enBuyuk(int x, int y)
 
 Console.WriteLine(enBuyuk(10,20));
 Console.WriteLine(enBuyuk(30, 20));
-Console.WriteLine(enBuyuk(10, 10));
+
 
 
 
