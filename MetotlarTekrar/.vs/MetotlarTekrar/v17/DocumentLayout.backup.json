@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tugay\\source\\repos\\MetotlarTekrar\\",
+  "WorkspaceRootPath": "F:\\Development\\Yaz\u0131l\u0131m E\u011Fitim 2025 TUA\\Yazilim-Egitim2025\\MetotlarTekrar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{18BA637F-D7D8-4DAB-9271-8474F6712A9B}|MetotlarTekrar\\MetotlarTekrar.csproj|c:\\users\\tugay\\source\\repos\\metotlartekrar\\metotlartekrar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{18BA637F-D7D8-4DAB-9271-8474F6712A9B}|MetotlarTekrar\\MetotlarTekrar.csproj|f:\\development\\yaz\u0131l\u0131m e\u011Fitim 2025 tua\\yazilim-egitim2025\\metotlartekrar\\metotlartekrar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18BA637F-D7D8-4DAB-9271-8474F6712A9B}|MetotlarTekrar\\MetotlarTekrar.csproj|solutionrelative:metotlartekrar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\tugay\\source\\repos\\MetotlarTekrar\\MetotlarTekrar\\Program.cs",
+              "DocumentMoniker": "F:\\Development\\Yaz\u0131l\u0131m E\u011Fitim 2025 TUA\\Yazilim-Egitim2025\\MetotlarTekrar\\MetotlarTekrar\\Program.cs",
               "RelativeDocumentMoniker": "MetotlarTekrar\\Program.cs",
-              "ToolTip": "C:\\Users\\tugay\\source\\repos\\MetotlarTekrar\\MetotlarTekrar\\Program.cs",
+              "ToolTip": "F:\\Development\\Yaz\u0131l\u0131m E\u011Fitim 2025 TUA\\Yazilim-Egitim2025\\MetotlarTekrar\\MetotlarTekrar\\Program.cs",
               "RelativeToolTip": "MetotlarTekrar\\Program.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAgwG8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAowHQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-03T16:39:21.206Z",
               "EditorCaption": ""

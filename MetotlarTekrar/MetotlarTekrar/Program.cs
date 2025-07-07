@@ -1,5 +1,4 @@
 ﻿// Switch-case örneği, int ile.
-using System.Security.Cryptography.X509Certificates;
 
 string isim = "Ahmet";
 switch (isim)
@@ -20,29 +19,32 @@ switch (isim)
 }
 
 
-// Switch-case örneği, string ile kullanıcan değer alarak.
-string gun = Console.ReadLine();
+// Switch-case örneği, string tipinde kullanıcan değer alarak.
+
+
+
+int gun = int.Parse(Console.ReadLine());
 switch (gun)
 {
-    case "1":
+    case 1:
         Console.WriteLine("Pazartesi");
         break;
-    case "2":
+    case 2:
         Console.WriteLine("Salı");
         break;
-    case "3":
+    case 3:
         Console.WriteLine("Çarşamba");
         break;
-    case "4":
+    case 4:
         Console.WriteLine("Perşembe");
         break;
-    case "5":
+    case 5:
         Console.WriteLine("Cuma");
         break;
-    case "6":
+    case 6:
         Console.WriteLine("Cumartesi");
         break;
-    case "7":
+    case 7:
         Console.WriteLine("Pazar");
         break;
 
@@ -81,31 +83,38 @@ string editName(string ad)
     return ad;
  
 }
-Console.WriteLine(editName(name));
 
+Console.WriteLine(editName(name));
+name = editName(name); // Name değişkenini güncelle, fonksiyonda düzenlenmiş haliyle
 
 
 
 // fonksiyona 2 tane rakam vereceğim, bu rakamlar büyük olanı bana geri döndürsün
 
 
-int enBuyuk(int x, int y)
+string enBuyuk(int x, int y)
 {
     if (x > y)
     {
-        return x;
+        return x+" bu rakam daha büyüktür!";
     }else if (y > x)
     {
-        return y;
+        return y+ " bu rakam daha büyüktür!";
     }
     else
     {
-        return 0;
+        return "Rakamlar birbirine eşittir";
     }
 }
 
+int unreadMes1 = 10;
+int unreadMes2 = 5;
+
+
 Console.WriteLine(enBuyuk(10,20));
 Console.WriteLine(enBuyuk(30, 20));
+Console.WriteLine(enBuyuk(unreadMes1,unreadMes2));
+Console.WriteLine(enBuyuk(5, 5));
 
 
 
