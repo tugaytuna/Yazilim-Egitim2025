@@ -7,7 +7,7 @@ Console.WriteLine("{0} kişisinin yaşı {1}",isim,yas);
 
 
 Ogrenci ogr1 = new Ogrenci();
-ogr1.Ad = "Tugay";
+ogr1.Ad = isim;
 ogr1.OrtNot = 70;
 ogr1.Vize1 = 50;
 ogr1.Vize2 = 60;
@@ -61,8 +61,6 @@ class Ogrenci
     {
         Console.WriteLine("Öğrencinin adı: {0}, Öğrencinin Not Ortalaması: {1}, Vize1: {2}, Vize2: {3}, Final Notu: {4}", Ad, OrtNot,Vize1,Vize2,Final);
     }
-
-
 }
 
 

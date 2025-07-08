@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPGiris-2", "OOPGiris-2\OOPGiris-2.csproj", "{38C48357-1246-4423-B58D-57E9C231E894}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPGiris-3", "OOPGiris-3\OOPGiris-3.csproj", "{DFC43CF5-ADC7-4296-AD14-1A428CDFDC82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38C48357-1246-4423-B58D-57E9C231E894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C48357-1246-4423-B58D-57E9C231E894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C48357-1246-4423-B58D-57E9C231E894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C48357-1246-4423-B58D-57E9C231E894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFC43CF5-ADC7-4296-AD14-1A428CDFDC82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC43CF5-ADC7-4296-AD14-1A428CDFDC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC43CF5-ADC7-4296-AD14-1A428CDFDC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC43CF5-ADC7-4296-AD14-1A428CDFDC82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D837E92B-1FA0-4198-9AE2-CAC69C3C9BF4}
+	EndGlobalSection
+EndGlobal
