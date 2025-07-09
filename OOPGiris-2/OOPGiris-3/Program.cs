@@ -37,6 +37,8 @@ foreach (SatilikEv ev in evlerListesi)
     Console.WriteLine("---------------");
 }
 
+// this
+
 
 class SatilikEv()
 {
