@@ -10,7 +10,7 @@ Kurs k2 = new Kurs()
 {
     Ad = "Grafik Tasarım Eğitimi",
     EgitmenAdi = "Levent Akgül",
-    KursKodu = 1154,
+    KursKodu = 1254,
     MaksKontenjan = 8
 };
 
