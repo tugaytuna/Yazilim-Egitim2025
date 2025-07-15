@@ -37,12 +37,11 @@ personeller.Add(og1);
 
 
 
-
 Console.WriteLine("--Tüm Personeller--");
 foreach (Kisi personel in personeller)
 {
     Console.WriteLine("Ad: {0}, Soyad: {1}, Meslek: {2}",personel.Ad, personel.Soyad,personel.Meslek);
-    
+
     //if (personel.Meslek == "Öğretmen")
     //{
     //    Console.WriteLine(personel);
