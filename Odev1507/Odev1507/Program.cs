@@ -72,7 +72,7 @@ while (true) {
     Console.WriteLine("2- Kurs Ekleme");
     Console.WriteLine("3- Kurs Bilgilerini Yazdırma");
     Console.WriteLine("4- Öğrencinin Kurs Bilgileri");
-    Console.WriteLine("5- Kurs/Öğrenci Arama");
+    Console.WriteLine("5- Öğrenciye Kurs Ekleme");
 
     string secim = Console.ReadLine();
 
@@ -91,7 +91,7 @@ while (true) {
             OgrencininKursBilgileri();
             break;
         case "5":
-            Console.WriteLine("Coming soon");
+            OgrenciyeKursEkle();
             break;
         default:
             Console.WriteLine("Hatalı tuşlama yaptınız!");
@@ -102,44 +102,51 @@ while (true) {
 
 void OgrenciEkleme()
 {
+    Ogrenci ogrenci1 = new Ogrenci();
+
     Console.WriteLine("Öğrencinin Adı:");
-    string ogrenciAd = Console.ReadLine();
+    ogrenci1.Ad = Console.ReadLine();
 
     Console.WriteLine("Öğrencinin Numarası:");
-    int ogrenciNumarasi = int.Parse(Console.ReadLine());
+    ogrenci1.OgrenciNumarasi = int.Parse(Console.ReadLine());
 
-    Ogrenci ogrenci1 = new Ogrenci()
-    {
-        Ad = ogrenciAd,
-        OgrenciNumarasi = ogrenciNumarasi
-    };
+    //Ogrenci ogrenci1 = new Ogrenci()
+    //{
+    //    Ad = ogrenciAd,
+    //    OgrenciNumarasi = ogrenciNumarasi
+    //};
+
 
     ogrenciler.Add(ogrenci1);
-    Console.WriteLine("Öğrenci başarıyla ekalendi!");
+    Console.WriteLine("Öğrenci başarıyla eklendi!");
 }
 
 void KursEkleme()
 {
+    Kurs kurs1 = new Kurs();
+
+
     Console.WriteLine("Kursun Adı:");
-    string KursAd = Console.ReadLine();
+    kurs1.Ad = Console.ReadLine();
 
     Console.WriteLine("Kursun Kodu:");
-    int kursKodu = int.Parse(Console.ReadLine());
+    kurs1.KursKodu = int.Parse(Console.ReadLine());
 
     Console.WriteLine("Eğitmenin Adı:");
-    string egitmenAd = Console.ReadLine();
+    kurs1.EgitmenAdi = Console.ReadLine();
 
     Console.WriteLine("Maks Kontenjan:");
-    int maksKont = int.Parse(Console.ReadLine());
+    kurs1.MaksKontenjan = int.Parse(Console.ReadLine());
 
 
-    Kurs kurs1 = new Kurs()
-    {
-        Ad = KursAd,
-        EgitmenAdi = egitmenAd,
-        KursKodu = kursKodu,
-        MaksKontenjan = maksKont
-    };
+    //Kurs kurs1 = new Kurs()
+    //{
+    //    Ad = KursAd,
+    //    EgitmenAdi = egitmenAd,
+    //    KursKodu = kursKodu,
+    //    MaksKontenjan = maksKont
+    //};
+   
 
 
     kurslar.Add(kurs1);
@@ -168,6 +175,45 @@ void OgrencininKursBilgileri()
         }
     }
     Console.WriteLine("{0} numaralı öğrenci kayıtlarda yoktur!", ogNo);
+
+
+
+}
+
+void OgrenciyeKursEkle() 
+{
+    Console.WriteLine("Öğrencinin Numarasını Giriniz:");
+    int ogNo = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Kurs Kodunu Giriniz:");
+    int kursKod = int.Parse(Console.ReadLine());
+
+
+    //foreach (Kurs kurs in kurslar)
+    //{
+    //    if (kursKod == kurs.KursKodu)
+    //    {
+    //        KursKaydet(kurs);
+    //    }
+    //}
+
+    //foreach (Ogrenci og in ogrenciler)
+    //{
+    //    if (og.OgrenciNumarasi == ogNo)
+    //    {
+    //        og.KayitliKurslar.Add(kursOrnek);
+    //        kursOrnek.MaksKontenjan -= 1;
+    //        Console.WriteLine("Kurs başarılı bir şekilde kaydedildi.");
+    //    }
+    //}
+
+    Kurs kursOrnek = kurslar.FirstOrDefault(kurs => kursKod == kurs.KursKodu);
+    Ogrenci ogrenciOrnek = ogrenciler.FirstOrDefault(og => og.OgrenciNumarasi == ogNo);
+
+    ogrenciOrnek.KayitliKurslar.Add(kursOrnek);
+    kursOrnek.MaksKontenjan -= 1;
+    Console.WriteLine("Kurs başarılı bir şekilde kaydedildi.");
+
 
 
 
@@ -216,7 +262,7 @@ class Ogrenci : Kurum
     public int OgrenciNumarasi{ get; set; }
 
     public List<Kurs> KayitliKurslar { get; set; } = new List<Kurs>();
-
+    //public List<int> KayitliKursKodlari { get; set; } = new List<int>();
 
 
     
