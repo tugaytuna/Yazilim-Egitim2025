@@ -18,12 +18,12 @@ List<string> isimler = new List<string>()
 
 string sonuc = isimler.FirstOrDefault(item => item == arama); // Kullanıcıdan aldığımız değeri arıyoruz.
 
-if (sonuc != null)
+if (sonuc != null) // sonuc boş değilse
 {
     Console.WriteLine("Sonuç: " + sonuc);
 }
 
-if (sonuc == null)
+if (sonuc == null) // sonuc boş ise
 {
     Console.WriteLine("Aradığınız kullanıcı bulunamadı!");
 }
