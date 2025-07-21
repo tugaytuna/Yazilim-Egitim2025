@@ -28,6 +28,7 @@ while (true)
     Console.WriteLine("4-Kayıtlarda Ara");
     Console.WriteLine("5-Müşteri Ekle");
     Console.WriteLine("6-Kayıt Ekle");
+    
 
 
     int secim = int.Parse(Console.ReadLine());
@@ -50,7 +51,7 @@ while (true)
             // Müşteri Ekle
             break;
         case 6:
-            // Kayıt Ekle
+            KayitEkle();
             break;
         default:
             Console.WriteLine("Hatalı tuşlama yaptınız, tekrar deneyiniz");
@@ -87,7 +88,9 @@ void MusteriAra()
 
     foreach (Musteri musteri in musteriler)
     {
-        if (musteri.Ad == arama)
+        
+
+        if (musteri.Ad.ToLower() == arama.ToLower())
         {        
             musteri.MusteriTanit();
         }
@@ -110,10 +113,43 @@ void MusteriAra()
 
 void KayitlariListele()
 {
-    foreach (Kayit kayit in kayitler)
+    Console.WriteLine("Kayıtları Listele");
+    Console.WriteLine("1- Tüm kayıtlar");
+    Console.WriteLine("2- Tamamlanan kayıtlar");
+    Console.WriteLine("3- Devam Eden kayıtlar");
+
+    int secim = int.Parse(Console.ReadLine());
+
+    if (secim == 1)
     {
-        kayit.KayitListele();
+        foreach (Kayit kayit in kayitler)
+        {
+            kayit.KayitListele();
+        }
+    }else if (secim == 2)
+    {
+        foreach (Kayit kayit in kayitler)
+        {
+            if (kayit.Tamamlandi)
+            {
+                kayit.KayitListele();
+            }
+            
+        }
+    }else if (secim == 3)
+    {
+        foreach (Kayit kayit in kayitler)
+        {
+            if (!kayit.Tamamlandi)
+            {
+                kayit.KayitListele();
+            }
+
+        }
     }
+
+
+    
 }
 
 void KayitlardaAra()
@@ -134,6 +170,65 @@ void KayitlardaAra()
         }
     }
 }
+
+void KayitEkle()
+{
+    Kayit kayit1 = new Kayit();
+
+    Console.WriteLine("Kayıt Ekleme Sayfası");
+    Console.WriteLine("Kayıt Id Giriniz:");
+
+    kayit1.KayitId = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Arıza mı başka bir işlem mi?");
+    Console.WriteLine("Arıza ise 1'i Diğer işlem ise 2'yi tuşlayın");
+    int secim1 = int.Parse(Console.ReadLine());
+    if (secim1 == 1)
+    {
+        kayit1.Ariza = true;
+    }else
+    {
+        kayit1.Ariza = false;
+    }
+
+    Console.WriteLine("İşlemin Fiyatını giriniz.");
+    kayit1.Fiyat = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("İşem tamamlandı mı?");
+    Console.WriteLine("Tamamlandı ise 1'i Hala devam ediyor ise 2'yi tuşlayın");
+    int secim2 = int.Parse(Console.ReadLine());
+    if (secim2 == 1)
+    {
+        kayit1.Tamamlandi = true;
+    }
+    else
+    {
+        kayit1.Tamamlandi = false;
+    }
+
+    // Müşteri Ara işlemi yapılır
+    // Müşteri bulunduğunda direkt olarak kayit içindeki müşteri prop'una eklenir.
+    
+
+    Console.WriteLine("Aramak istediğiniz müşterinin adını giriniz:");
+    string arama = Console.ReadLine();
+
+    foreach (Musteri musteri in musteriler)
+    {
+        if (musteri.Ad.ToLower() == arama.ToLower())
+        {
+            kayit1.Musteri = musteri;
+        }
+    }
+
+    kayitler.Add(kayit1);
+
+
+    Console.WriteLine("Kayıt başarılı bir şekilde eklendi!");
+}
+
+
+
 
 
 
@@ -176,11 +271,12 @@ class Kayit
 
     public Urun TamirUrun { get; set; } = new Urun();
 
-    public Musteri Musteri{ get; set; }
+    public Musteri Musteri{ get; set; }  
 
 
     public void KayitListele()
     {
+        Console.WriteLine("Kayıt Numarası: " + KayitId);
         if (Ariza)
         {
             Console.WriteLine("Kayıt Türü: Arıza");
