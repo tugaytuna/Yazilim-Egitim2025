@@ -7,6 +7,16 @@ List<Musteri> musteriler = new List<Musteri>()
     new Musteri(){Ad="Metin",Soyad="Ok",Il="İzmir",Telefon=0505458974},
     new Musteri(){Ad="Sibel", Soyad="Katar", Il="Ankara", Telefon=054545421}
 };
+
+
+//Müşteriler
+//    Ad      Soyad       İl         Telefon
+//    Ahmet   Yılmaz   İstanbul       554545564
+//    Elif    Sezgin   İstanbul       545545454
+//    Levent  Akgül    İstanbul       554654646
+//    Metin   Ok       İzmir          454545545
+
+
 List<Kayit> kayitler = new List<Kayit>()
 {
     new Kayit(){KayitId=1,Musteri = musteriler[0], Ariza=true, Fiyat=1000, Tamamlandi=true, Teknisyen="Ahmet Teknik"},
