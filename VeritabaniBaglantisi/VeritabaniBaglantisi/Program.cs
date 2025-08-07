@@ -118,7 +118,6 @@ namespace VeritabaniBaglantisi
                     command.Parameters.AddWithValue("@takipci",takipciSayisi);
                     command.Parameters.AddWithValue("@takipedilen",takipEdilenSayisi);
 
-
                     int result = command.ExecuteNonQuery();
                 
 
