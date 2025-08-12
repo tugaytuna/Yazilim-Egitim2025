@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -63,8 +64,18 @@ namespace HesapMakinesi
          
         void Hesapla(string islem, string _sayi1, string _sayi2)
         {
-            int sayi1 = int.Parse(_sayi1);
-            int sayi2 = int.Parse(_sayi2);
+            int sayi1 = 0;
+            int sayi2 = 0;
+
+            try{
+                sayi1 = int.Parse(_sayi1);
+                sayi2 = int.Parse(_sayi2);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            
 
             int sonuc = 0;
 
