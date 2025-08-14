@@ -132,6 +132,10 @@ namespace KontrollerOrnek
             public DateTime OlusturmaZamani { get; set; }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+          // Form ilk yüklendiğinde
+        }
 
     }
 }

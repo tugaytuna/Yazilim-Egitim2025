@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtKadi = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.btnKayitOl = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSifre = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.btnKayitOl = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtKadi = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnGirisYap = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(117, 29);
+            this.label1.Location = new System.Drawing.Point(151, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(406, 40);
             this.label1.TabIndex = 0;
@@ -75,21 +75,49 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kayıt Ol";
             // 
-            // txtKadi
+            // radioButton2
             // 
-            this.txtKadi.Location = new System.Drawing.Point(26, 59);
-            this.txtKadi.Name = "txtKadi";
-            this.txtKadi.Size = new System.Drawing.Size(153, 20);
-            this.txtKadi.TabIndex = 0;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(84, 135);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(51, 18);
+            this.radioButton2.TabIndex = 7;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Erkek";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // radioButton1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 14);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Kullanıcı Adı:";
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(26, 135);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(52, 18);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Kadın";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // btnKayitOl
+            // 
+            this.btnKayitOl.Enabled = false;
+            this.btnKayitOl.Location = new System.Drawing.Point(26, 200);
+            this.btnKayitOl.Name = "btnKayitOl";
+            this.btnKayitOl.Size = new System.Drawing.Size(153, 29);
+            this.btnKayitOl.TabIndex = 5;
+            this.btnKayitOl.Text = "Kayıt Ol";
+            this.btnKayitOl.UseVisualStyleBackColor = true;
+            this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(26, 176);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(222, 18);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Kayıt sözleşmesini okudum, onaylıyorum.";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label3
             // 
@@ -109,49 +137,21 @@
             this.txtSifre.Size = new System.Drawing.Size(153, 20);
             this.txtSifre.TabIndex = 2;
             // 
-            // checkBox1
+            // label2
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(26, 176);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(222, 18);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Kayıt sözleşmesini okudum, onaylıyorum.";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 14);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Kullanıcı Adı:";
             // 
-            // btnKayitOl
+            // txtKadi
             // 
-            this.btnKayitOl.Enabled = false;
-            this.btnKayitOl.Location = new System.Drawing.Point(26, 200);
-            this.btnKayitOl.Name = "btnKayitOl";
-            this.btnKayitOl.Size = new System.Drawing.Size(153, 29);
-            this.btnKayitOl.TabIndex = 5;
-            this.btnKayitOl.Text = "Kayıt Ol";
-            this.btnKayitOl.UseVisualStyleBackColor = true;
-            this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(26, 135);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(52, 18);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Kadın";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(84, 135);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(51, 18);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Erkek";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.txtKadi.Location = new System.Drawing.Point(26, 59);
+            this.txtKadi.Name = "txtKadi";
+            this.txtKadi.Size = new System.Drawing.Size(153, 20);
+            this.txtKadi.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -222,6 +222,7 @@
             this.Font = new System.Drawing.Font("Arial", 8.25F);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
