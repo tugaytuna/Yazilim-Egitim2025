@@ -28,6 +28,9 @@ namespace KontrollerOrnek
                 return;
             }
 
+
+            
+
             //Checkbox seçili değilse devam edemezsiniz!
             //if (!checkBox1.Checked)
             //{
@@ -114,11 +117,7 @@ namespace KontrollerOrnek
                     MessageBox.Show("Kullanıcının cinsiyeti: " + user.Cinsiyet);
                     MessageBox.Show("Oluşturulma Zamanı (test): " + user.OlusturmaZamani.ToString());
                 }
-                
             }
-
-
-            
         }
 
 
