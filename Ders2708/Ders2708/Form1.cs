@@ -64,7 +64,7 @@ namespace Ders2708
 
                 //MessageBox.Show("Kullanıcının yaşı: " + users[loggedUserId - 1].Age);
 
-                MessageBox.Show("Kullanıcının yaşı: " + loggedUser.Age);
+                //MessageBox.Show("Kullanıcının yaşı: " + loggedUser.Age);
 
                 lblName.Text = loggedUser.UserName;
                 lblEmail.Text = loggedUser.Email;
@@ -99,7 +99,6 @@ namespace Ders2708
             public int Age { get; set; }
 
             public bool Admin { get; set; }
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -118,7 +117,7 @@ namespace Ders2708
         private void button1_Click(object sender, EventArgs e)
         {
             colorDialog1.ShowDialog();
-            grpPersonalInfo.BackColor = colorDialog1.Color;
+            
 
 
             if (loggedUser.Admin)
@@ -134,6 +133,11 @@ namespace Ders2708
             }
             
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            grpPersonalInfo.BackColor = colorDialog1.Color;
         }
     }
 }
