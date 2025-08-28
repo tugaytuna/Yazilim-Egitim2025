@@ -35,13 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.grpPersonalInfo = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpPersonalInfo.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +119,16 @@
             this.grpPersonalInfo.Text = "Kişisel Bilgileri";
             this.grpPersonalInfo.Visible = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(91, 152);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Renk Ayarla";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // listView1
             // 
             this.listView1.HideSelection = false;
@@ -169,16 +179,6 @@
             // colorDialog1
             // 
             this.colorDialog1.Color = System.Drawing.Color.Transparent;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(91, 152);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Renk Ayarla";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
