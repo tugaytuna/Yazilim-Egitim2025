@@ -32,7 +32,7 @@
             this.txtTemelMaas = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSatisPrim = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +47,8 @@
             this.btnHesapla = new System.Windows.Forms.Button();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.btnSatisHesap = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtAylikHedef = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -78,19 +80,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 169);
+            this.label3.Location = new System.Drawing.Point(50, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Satış Primi:";
             // 
-            // textBox2
+            // txtSatisPrim
             // 
-            this.textBox2.Location = new System.Drawing.Point(124, 166);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtSatisPrim.Location = new System.Drawing.Point(124, 204);
+            this.txtSatisPrim.Name = "txtSatisPrim";
+            this.txtSatisPrim.ReadOnly = true;
+            this.txtSatisPrim.Size = new System.Drawing.Size(100, 20);
+            this.txtSatisPrim.TabIndex = 3;
             // 
             // radioButton1
             // 
@@ -117,7 +119,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 205);
+            this.label4.Location = new System.Drawing.Point(50, 243);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 8;
@@ -125,7 +127,7 @@
             // 
             // txtGunSayisi
             // 
-            this.txtGunSayisi.Location = new System.Drawing.Point(124, 202);
+            this.txtGunSayisi.Location = new System.Drawing.Point(124, 240);
             this.txtGunSayisi.Name = "txtGunSayisi";
             this.txtGunSayisi.Size = new System.Drawing.Size(100, 20);
             this.txtGunSayisi.TabIndex = 7;
@@ -134,7 +136,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 253);
+            this.label5.Location = new System.Drawing.Point(50, 291);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 10;
@@ -142,7 +144,7 @@
             // 
             // txtYol
             // 
-            this.txtYol.Location = new System.Drawing.Point(124, 250);
+            this.txtYol.Location = new System.Drawing.Point(124, 288);
             this.txtYol.Name = "txtYol";
             this.txtYol.ReadOnly = true;
             this.txtYol.Size = new System.Drawing.Size(100, 20);
@@ -151,7 +153,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(50, 279);
+            this.label6.Location = new System.Drawing.Point(50, 317);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 13);
             this.label6.TabIndex = 12;
@@ -159,7 +161,7 @@
             // 
             // txtYemek
             // 
-            this.txtYemek.Location = new System.Drawing.Point(124, 276);
+            this.txtYemek.Location = new System.Drawing.Point(124, 314);
             this.txtYemek.Name = "txtYemek";
             this.txtYemek.ReadOnly = true;
             this.txtYemek.Size = new System.Drawing.Size(100, 20);
@@ -169,7 +171,7 @@
             // 
             this.lblSonuc.AutoSize = true;
             this.lblSonuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSonuc.Location = new System.Drawing.Point(124, 357);
+            this.lblSonuc.Location = new System.Drawing.Point(124, 395);
             this.lblSonuc.Name = "lblSonuc";
             this.lblSonuc.Size = new System.Drawing.Size(0, 25);
             this.lblSonuc.TabIndex = 13;
@@ -196,7 +198,7 @@
             // 
             // btnHesapla
             // 
-            this.btnHesapla.Location = new System.Drawing.Point(53, 313);
+            this.btnHesapla.Location = new System.Drawing.Point(53, 351);
             this.btnHesapla.Name = "btnHesapla";
             this.btnHesapla.Size = new System.Drawing.Size(176, 23);
             this.btnHesapla.TabIndex = 16;
@@ -217,7 +219,7 @@
             // 
             // btnSatisHesap
             // 
-            this.btnSatisHesap.Location = new System.Drawing.Point(230, 163);
+            this.btnSatisHesap.Location = new System.Drawing.Point(230, 201);
             this.btnSatisHesap.Name = "btnSatisHesap";
             this.btnSatisHesap.Size = new System.Drawing.Size(63, 23);
             this.btnSatisHesap.TabIndex = 18;
@@ -225,11 +227,29 @@
             this.btnSatisHesap.UseVisualStyleBackColor = true;
             this.btnSatisHesap.Click += new System.EventHandler(this.btnSatisHesap_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(50, 181);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Aylık Hedef:";
+            // 
+            // txtAylikHedef
+            // 
+            this.txtAylikHedef.Location = new System.Drawing.Point(124, 178);
+            this.txtAylikHedef.Name = "txtAylikHedef";
+            this.txtAylikHedef.Size = new System.Drawing.Size(100, 20);
+            this.txtAylikHedef.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 463);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtAylikHedef);
             this.Controls.Add(this.btnSatisHesap);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.btnHesapla);
@@ -245,7 +265,7 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSatisPrim);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTemelMaas);
             this.Controls.Add(this.label1);
@@ -265,7 +285,7 @@
         private System.Windows.Forms.TextBox txtTemelMaas;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSatisPrim;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label4;
@@ -280,6 +300,8 @@
         private System.Windows.Forms.Button btnHesapla;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Button btnSatisHesap;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtAylikHedef;
     }
 }
 

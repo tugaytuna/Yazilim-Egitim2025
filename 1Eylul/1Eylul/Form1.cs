@@ -19,7 +19,7 @@ namespace _1Eylul
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -28,7 +28,7 @@ namespace _1Eylul
         private void btnHesapla_Click(object sender, EventArgs e)
         {
             Hesapla();
-        
+            
         }
 
         int temelMaas = 0;
@@ -37,6 +37,10 @@ namespace _1Eylul
 
         double yolUcret = 0;
         double yemekUcret = 0;
+
+        double aylikHedef = 0;
+
+
 
 
         void Hesapla()
@@ -62,6 +66,9 @@ namespace _1Eylul
 
             calismaGunu = double.Parse(txtGunSayisi.Text);
 
+            double totalSonuc = (temelMaas * performansBonus) + double.Parse(txtSatisPrim.Text) + yolUcret + yemekUcret;
+            lblSonuc.Text = totalSonuc.ToString() + " TL";
+
 
         }
 
@@ -74,16 +81,39 @@ namespace _1Eylul
             {
                 calismaGunu = 0;
             }
+
+            yolUcret = calismaGunu * 115;
+            yemekUcret = calismaGunu * 345;
+
+            txtYemek.Text = yemekUcret.ToString();
+            txtYol.Text = yolUcret.ToString();
+        }
+
+        public void btnSatisHesap_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                aylikHedef = double.Parse(txtAylikHedef.Text);
+            }
+            catch
+            {
+                aylikHedef = 0;
+            }
+
+
+            Form2 form2 = new Form2(aylikHedef);
             
 
-            txtYemek.Text = (calismaGunu * 345).ToString();
-            txtYol.Text = (calismaGunu * 115).ToString();
+            if (form2.ShowDialog() == DialogResult.OK)
+            {
+                txtSatisPrim.Text = form2.sonucPrim.ToString();
+            }
+            
+            
         }
 
-        private void btnSatisHesap_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.Show();
-        }
+       
+
+     
     }
 }
