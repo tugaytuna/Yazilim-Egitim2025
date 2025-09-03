@@ -19,6 +19,7 @@ namespace _1Eylul
             txtAylikHedef.Text = _aylikHedef.ToString() + " TL";
         }
 
+
         double aylikHedef = 0;
         double satisAdet = 0;
 
@@ -26,11 +27,13 @@ namespace _1Eylul
 
         public double sonucPrim { get; set; }
 
+
+
         private void btnPrimHesapla_Click(object sender, EventArgs e)
         {
           
 
-
+            
             this.DialogResult = DialogResult.OK;
             this.Close();
 

@@ -102,12 +102,15 @@ namespace _1Eylul
 
 
             Form2 form2 = new Form2(aylikHedef);
-            
+
+           
 
             if (form2.ShowDialog() == DialogResult.OK)
             {
                 txtSatisPrim.Text = form2.sonucPrim.ToString();
             }
+
+
             
             
         }
