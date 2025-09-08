@@ -34,6 +34,8 @@
             this.lblData1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.listView2 = new System.Windows.Forms.ListView();
+            this.btnYeniKayit = new System.Windows.Forms.Button();
+            this.btnUpdateTable = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,11 +95,33 @@
             this.listView2.TabIndex = 5;
             this.listView2.UseCompatibleStateImageBehavior = false;
             // 
+            // btnYeniKayit
+            // 
+            this.btnYeniKayit.Location = new System.Drawing.Point(713, 410);
+            this.btnYeniKayit.Name = "btnYeniKayit";
+            this.btnYeniKayit.Size = new System.Drawing.Size(75, 23);
+            this.btnYeniKayit.TabIndex = 6;
+            this.btnYeniKayit.Text = "Yeni Kayıt";
+            this.btnYeniKayit.UseVisualStyleBackColor = true;
+            this.btnYeniKayit.Click += new System.EventHandler(this.btnYeniKayit_Click);
+            // 
+            // btnUpdateTable
+            // 
+            this.btnUpdateTable.Location = new System.Drawing.Point(337, 411);
+            this.btnUpdateTable.Name = "btnUpdateTable";
+            this.btnUpdateTable.Size = new System.Drawing.Size(164, 23);
+            this.btnUpdateTable.TabIndex = 7;
+            this.btnUpdateTable.Text = "Tabloyu Güncelle";
+            this.btnUpdateTable.UseVisualStyleBackColor = true;
+            this.btnUpdateTable.Click += new System.EventHandler(this.btnUpdateTable_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 744);
+            this.Controls.Add(this.btnUpdateTable);
+            this.Controls.Add(this.btnYeniKayit);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.lblData1);
@@ -121,6 +145,8 @@
         private System.Windows.Forms.Label lblData1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.Button btnYeniKayit;
+        private System.Windows.Forms.Button btnUpdateTable;
     }
 }
 
