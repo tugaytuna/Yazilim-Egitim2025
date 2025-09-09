@@ -36,7 +36,6 @@
             this.txtModel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtKm = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,7 +43,11 @@
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.lblTrackNumber = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
+            this.txtAracId = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numericKm = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericKm)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +62,7 @@
             // 
             // txtMarka
             // 
-            this.txtMarka.Location = new System.Drawing.Point(70, 118);
+            this.txtMarka.Location = new System.Drawing.Point(71, 141);
             this.txtMarka.Name = "txtMarka";
             this.txtMarka.Size = new System.Drawing.Size(100, 20);
             this.txtMarka.TabIndex = 1;
@@ -67,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(67, 102);
+            this.label2.Location = new System.Drawing.Point(68, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 2;
@@ -76,7 +79,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(67, 152);
+            this.label3.Location = new System.Drawing.Point(68, 175);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 4;
@@ -85,7 +88,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(67, 195);
+            this.label4.Location = new System.Drawing.Point(68, 218);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(21, 13);
             this.label4.TabIndex = 6;
@@ -93,7 +96,7 @@
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(70, 172);
+            this.txtModel.Location = new System.Drawing.Point(71, 195);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(100, 20);
             this.txtModel.TabIndex = 5;
@@ -101,7 +104,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(214, 102);
+            this.label5.Location = new System.Drawing.Point(215, 125);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 8;
@@ -110,23 +113,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(214, 195);
+            this.label6.Location = new System.Drawing.Point(215, 218);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Kilometre:";
             // 
-            // txtKm
-            // 
-            this.txtKm.Location = new System.Drawing.Point(217, 211);
-            this.txtKm.Name = "txtKm";
-            this.txtKm.Size = new System.Drawing.Size(100, 20);
-            this.txtKm.TabIndex = 9;
-            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(73, 265);
+            this.radioButton1.Location = new System.Drawing.Point(74, 288);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(60, 17);
             this.radioButton1.TabIndex = 11;
@@ -137,7 +133,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(139, 265);
+            this.radioButton2.Location = new System.Drawing.Point(140, 288);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(67, 17);
             this.radioButton2.TabIndex = 12;
@@ -148,7 +144,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(70, 249);
+            this.label7.Location = new System.Drawing.Point(71, 272);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(33, 13);
             this.label7.TabIndex = 13;
@@ -156,6 +152,7 @@
             // 
             // drpYil
             // 
+            this.drpYil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.drpYil.FormattingEnabled = true;
             this.drpYil.Items.AddRange(new object[] {
             "2015",
@@ -169,7 +166,7 @@
             "2023",
             "2024",
             "2025"});
-            this.drpYil.Location = new System.Drawing.Point(70, 211);
+            this.drpYil.Location = new System.Drawing.Point(71, 234);
             this.drpYil.Name = "drpYil";
             this.drpYil.Size = new System.Drawing.Size(100, 21);
             this.drpYil.TabIndex = 14;
@@ -177,7 +174,7 @@
             // trackBar1
             // 
             this.trackBar1.LargeChange = 50;
-            this.trackBar1.Location = new System.Drawing.Point(217, 125);
+            this.trackBar1.Location = new System.Drawing.Point(218, 148);
             this.trackBar1.Maximum = 2000;
             this.trackBar1.Minimum = 500;
             this.trackBar1.Name = "trackBar1";
@@ -191,14 +188,14 @@
             // lblTrackNumber
             // 
             this.lblTrackNumber.AutoSize = true;
-            this.lblTrackNumber.Location = new System.Drawing.Point(217, 171);
+            this.lblTrackNumber.Location = new System.Drawing.Point(218, 194);
             this.lblTrackNumber.Name = "lblTrackNumber";
             this.lblTrackNumber.Size = new System.Drawing.Size(0, 13);
             this.lblTrackNumber.TabIndex = 16;
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(70, 316);
+            this.btnKaydet.Location = new System.Drawing.Point(71, 339);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(247, 23);
             this.btnKaydet.TabIndex = 17;
@@ -206,11 +203,49 @@
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
+            // txtAracId
+            // 
+            this.txtAracId.Location = new System.Drawing.Point(118, 89);
+            this.txtAracId.Name = "txtAracId";
+            this.txtAracId.ReadOnly = true;
+            this.txtAracId.Size = new System.Drawing.Size(200, 20);
+            this.txtAracId.TabIndex = 18;
+            this.txtAracId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(68, 92);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Araç Id:";
+            // 
+            // numericKm
+            // 
+            this.numericKm.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericKm.Location = new System.Drawing.Point(218, 234);
+            this.numericKm.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericKm.Name = "numericKm";
+            this.numericKm.Size = new System.Drawing.Size(100, 20);
+            this.numericKm.TabIndex = 20;
+            // 
             // YeniKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 461);
+            this.Controls.Add(this.numericKm);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtAracId);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.lblTrackNumber);
             this.Controls.Add(this.trackBar1);
@@ -219,7 +254,6 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtKm);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtModel);
@@ -231,6 +265,7 @@
             this.Text = "Yeni Kayit";
             this.Load += new System.EventHandler(this.YeniKayit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericKm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,7 +281,6 @@
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtKm;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label7;
@@ -254,5 +288,8 @@
         private System.Windows.Forms.Label lblTrackNumber;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.TextBox txtAracId;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown numericKm;
     }
 }

@@ -28,13 +28,16 @@ namespace RentaCarOrnekM
         string query2 = "SELECT * FROM AktifKullanicilar ORDER BY TakipciSayisi DESC";
         string query3 = "SELECT * FROM Araclar";
 
+        int rowCount = 0;
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             UpdateTable();
 
         }
 
-        void UpdateTable()
+        DataTable UpdateTable()
         {
             SqlConnection connection = new SqlConnection(connectionString2);
 
@@ -45,8 +48,8 @@ namespace RentaCarOrnekM
 
 
             dataGridView1.DataSource = table1;
-
-
+            rowCount = dataGridView1.RowCount;
+            return table1;
         }
 
         private void btnLoadData_Click(object sender, EventArgs e)
@@ -83,7 +86,8 @@ namespace RentaCarOrnekM
 
         private void btnYeniKayit_Click(object sender, EventArgs e)
         {
-            YeniKayit yeniKayitForm = new YeniKayit();
+            YeniKayit yeniKayitForm = new YeniKayit(rowCount);
+           
 
             if (yeniKayitForm.ShowDialog() == DialogResult.OK)
             {
@@ -91,6 +95,7 @@ namespace RentaCarOrnekM
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("INSERT INTO Araclar (Marka, Model, Yil, Vites, GunlukKira, Kilometre) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)",connection);
+                
                 command.Parameters.AddWithValue("@p1", yeniKayitForm.Marka);
                 command.Parameters.AddWithValue("@p2", yeniKayitForm.Model);
                 command.Parameters.AddWithValue("@p3", yeniKayitForm.Yil);
@@ -98,7 +103,9 @@ namespace RentaCarOrnekM
                 command.Parameters.AddWithValue("@p5", yeniKayitForm.GunlukKira);
                 command.Parameters.AddWithValue("p6", yeniKayitForm.Kilometre);
 
+                
                 command.ExecuteNonQuery();
+                
 
                 connection.Close();
                 UpdateTable();
@@ -111,6 +118,33 @@ namespace RentaCarOrnekM
         private void btnUpdateTable_Click(object sender, EventArgs e)
         {
             UpdateTable();
+        }
+
+        private void btnKayitSil_Click(object sender, EventArgs e)
+        {
+            KayitSil kayitSilForm = new KayitSil(UpdateTable());
+
+            if(kayitSilForm.ShowDialog() == DialogResult.OK)
+            {
+                SqlConnection connection = new SqlConnection(connectionString2);
+                connection.Open();
+                SqlCommand command = new SqlCommand("DELETE FROM Araclar WHERE AracID=@p1", connection);
+                command.Parameters.AddWithValue("@p1", kayitSilForm.AracId);
+                 
+                int commandResult = command.ExecuteNonQuery();
+
+                connection.Close();
+
+
+                MessageBox.Show(commandResult.ToString() + " tane satır etkilendi. Silme işlemi başarılı!", "Silme İşlemi Başarılı!");
+
+                UpdateTable();
+
+            }
+
+
+
+
         }
     }
 }

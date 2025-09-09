@@ -36,6 +36,7 @@
             this.listView2 = new System.Windows.Forms.ListView();
             this.btnYeniKayit = new System.Windows.Forms.Button();
             this.btnUpdateTable = new System.Windows.Forms.Button();
+            this.btnKayitSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,11 +116,22 @@
             this.btnUpdateTable.UseVisualStyleBackColor = true;
             this.btnUpdateTable.Click += new System.EventHandler(this.btnUpdateTable_Click);
             // 
+            // btnKayitSil
+            // 
+            this.btnKayitSil.Location = new System.Drawing.Point(713, 439);
+            this.btnKayitSil.Name = "btnKayitSil";
+            this.btnKayitSil.Size = new System.Drawing.Size(75, 23);
+            this.btnKayitSil.TabIndex = 8;
+            this.btnKayitSil.Text = "Kayıt Sil";
+            this.btnKayitSil.UseVisualStyleBackColor = true;
+            this.btnKayitSil.Click += new System.EventHandler(this.btnKayitSil_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 744);
+            this.Controls.Add(this.btnKayitSil);
             this.Controls.Add(this.btnUpdateTable);
             this.Controls.Add(this.btnYeniKayit);
             this.Controls.Add(this.listView2);
@@ -147,6 +159,7 @@
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Button btnYeniKayit;
         private System.Windows.Forms.Button btnUpdateTable;
+        private System.Windows.Forms.Button btnKayitSil;
     }
 }
 

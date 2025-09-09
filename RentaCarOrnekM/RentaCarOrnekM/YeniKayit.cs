@@ -12,9 +12,10 @@ namespace RentaCarOrnekM
 {
     public partial class YeniKayit : Form
     {
-        public YeniKayit()
+        public YeniKayit(int _rowCount)
         {
             InitializeComponent();
+            txtAracId.Text = _rowCount.ToString();
         }
 
         public string Marka { get; set; }
@@ -43,11 +44,23 @@ namespace RentaCarOrnekM
                 return;
             }
 
+            if (txtMarka.Text == "" || txtModel.Text == "") 
+            {
+                MessageBox.Show("Marka-Model boş bırakılamaz!");
+                return;
+            }
+
             Marka = txtMarka.Text;
             Model = txtModel.Text;
+
             Yil = int.Parse(drpYil.Text);
+
+
             GunlukKira = trackBar1.Value;
-            Kilometre = int.Parse(txtKm.Text);
+
+            Kilometre = Convert.ToInt32(numericKm.Value);
+            //Kilometre = int.Parse(txtKm.Text);
+
             
 
             if (radioButton1.Checked)
