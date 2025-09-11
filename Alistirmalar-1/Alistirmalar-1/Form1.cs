@@ -21,9 +21,14 @@ namespace Alistirmalar_1
         {
             Settings settings1 = new Settings();
 
-            if(settings1.ShowDialog() == DialogResult.OK)
+            DialogResult settingDResult = settings1.ShowDialog();
+
+            if(settingDResult == DialogResult.OK)
             {
                 MessageBox.Show("İşlem başarılı!");
+            }else if (settingDResult == DialogResult.Abort)
+            {
+                MessageBox.Show("Abort!");
             }
             else
             {
@@ -50,7 +55,10 @@ namespace Alistirmalar_1
         {
             DateTime dt = new DateTime();
             dt = DateTime.Now.AddYears(-18);
-            dateTimePicker1.MaxDate = dt;
+            //dateTimePicker1.MaxDate = dt;
+
+
+            dateTimePicker1.MaxDate = DateTime.Now.AddYears(-18);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -63,6 +71,16 @@ namespace Alistirmalar_1
             string gunler = (DateTime.Now - sdt).TotalDays.ToString();
             gunler = gunler.Remove(gunler.IndexOf(','));
             label1.Text = gunler;
+            
+            // 9954,46546546546541654 --- 4
+            // 123,45654654654 --- 3
+            // 4548,5456465 --- 4
+
+
+            if (dateTimePicker1.Value > DateTime.Now.AddYears(-18))
+            {
+                MessageBox.Show("18 Yaşından küçükler giremez!");
+            }
 
         }
     }

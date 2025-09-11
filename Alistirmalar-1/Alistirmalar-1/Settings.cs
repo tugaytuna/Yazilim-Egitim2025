@@ -35,8 +35,8 @@ namespace Alistirmalar_1
 
             
             DialogResult result = MessageBox.Show("Message Box", "Uyarı");
-            
-            //this.DialogResult = DialogResult.OK;
+
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
