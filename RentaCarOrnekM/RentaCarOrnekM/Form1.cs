@@ -46,10 +46,17 @@ namespace RentaCarOrnekM
             DataTable table1 = new DataTable();
             adap.Fill(table1);
 
-
+            table1.TableNewRow += Table1_TableNewRow;
             dataGridView1.DataSource = table1;
+
+
             rowCount = dataGridView1.RowCount;
             return table1;
+        }
+
+        private void Table1_TableNewRow(object sender, DataTableNewRowEventArgs e)
+        {
+            MessageBox.Show("table new row");
         }
 
         private void btnLoadData_Click(object sender, EventArgs e)
