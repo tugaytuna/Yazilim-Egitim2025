@@ -1,0 +1,61 @@
+h1 {
+  text-align: center;
+  color: aquamarine;
+}
+
+#altbaslik {
+  color: rgb(217, 217, 13);
+}
+
+.yazi1 {
+  color: rgb(18, 88, 30);
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+
+  /* Her yönden boşluk */
+  margin: 50px;
+
+  /* Yukarıdan ve Aşağıdan - Soldan ve Sağdan */
+  /* margin: 50px 20px; */
+
+  /* Yukarıdan - Sağdan - Aşağıdan - Soldan */
+  /* margin: 50px 30px 20px 60px; */
+}
+
+nav a {
+  text-decoration: none;
+  background-color: coral;
+  color: white;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px 10px;
+  border: 1px solid #523400;
+}
+
+.hakkinda-gorsellerdiv {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.hakkinda-gorsellerdiv img {
+  width: 300px;
+}
+
+.div1 {
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  background-color: red;
+}
+
+.div1 a {
+  background-color: rgb(218, 218, 244);
+  display: block;
+}
