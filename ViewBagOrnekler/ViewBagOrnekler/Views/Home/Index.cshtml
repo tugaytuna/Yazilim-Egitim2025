@@ -1,8 +1,23 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Giriş Sayfa";
+    ViewData["Ad"] = "Tugay";
+
+    int toplam = 0;
+    for (int i = 0; i <= 10; i++)
+    {
+        toplam += i;
+    }
+    ViewData["Toplam"] = toplam;
+    ViewBag.Message = "Kullanıcı Giriş Yaptı";
+    ViewBag.Toplam = toplam;
 }
 
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">@ViewData["Title"]</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h4>@ViewData["Ad"]</h4>
+    <h4>1'den 10'a kadar olan sayıların toplam: @ViewBag.Toplam</h4>
+    <h4>@ViewData["Yas"]</h4>
+    <h4>@ViewBag.Message</h4>
 </div>
