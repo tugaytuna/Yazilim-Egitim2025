@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewBagOrnekler", "ViewBagOrnekler\ViewBagOrnekler.csproj", "{B2610CE3-2B25-4384-90EB-94D214E119F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2610CE3-2B25-4384-90EB-94D214E119F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2610CE3-2B25-4384-90EB-94D214E119F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2610CE3-2B25-4384-90EB-94D214E119F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2610CE3-2B25-4384-90EB-94D214E119F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F6869E1-4FBA-4377-9417-8806C90FB616}
+	EndGlobalSection
+EndGlobal
