@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using ViewBagOrnekler.Models;
+using ModelOrnek.Models;
 
-namespace ViewBagOrnekler.Controllers
+namespace ModelOrnek.Controllers
 {
     public class HomeController : Controller
     {
@@ -15,21 +15,32 @@ namespace ViewBagOrnekler.Controllers
 
         public IActionResult Index()
         {
-            ViewData["Yas"] = 20;
-            ViewBag.Message = "Çýkýþ Yapýldý!";
+            ViewBag.Ad = "Tugay";
             return View();
         }
 
         public IActionResult Privacy()
         {
-            ViewData["Yas"] = 30;
-            ViewBag.Tarih = DateTime.Now;
-            DateTime dt = new DateTime(DateTime.Now.Year, 12, 31,23,59,59);
-         
-            ViewBag.GeriSayim = (dt.DayOfYear - DateTime.Now.DayOfYear);
-            ViewBag.GeriSayimSaat = (dt.Hour - DateTime.Now.Hour);
-            ViewBag.GerisayimDk = (dt.Minute - DateTime.Now.Minute);
+            ViewBag.Ad = "Tuna";
             return View();
+        }
+
+        public IActionResult OgrenciDetay()
+        {
+            var ogrenci1 = new Ogrenci()
+            {
+                Id = 1,
+                Ad = "Tugay",
+                Aktif = true,
+                Sinif = 11,
+                Yas = 20
+            };
+
+
+            //var ogrenci2 = new Ogrenci();
+            //ogrenci2.Id = 2;
+            //ogrenci2.Aktif = true;
+            return View(ogrenci1);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
