@@ -1,14 +1,43 @@
-﻿@model Ogrenci
+﻿@model List<Ogrenci>
+
+
+@{
+    
+
+}
 
 <h1>Öğrenci Detay</h1>
+<button>Tümünü Göster</button>
+<button>Sadece Akif Öğrenciler</button>
 
-<div class="ogrenci">
-    <label>Öğrenci Numarası: @Model.Id </label>
-    <h2>@Model.Ad</h2>
-    <h4>Sınıfı: @Model.Sinif </h4>
-    <br />
-    <label>Yaşı: @Model.Yas </label>
-    <br>
-    <label>Aktif: @Model.Aktif </label>
+@foreach (Ogrenci ogr in Model)
+{
+    if (ogr.Aktif)
+    {
+        <div class="ogrenci">
+            <label>Öğrenci Numarası: @ogr.Id </label>
+            <h2>@ogr.Ad</h2>
+            <h4>Sınıfı: @ogr.Sinif </h4>
+            <br />
+            <label>Yaşı: @ogr.Yas </label>
+            <br>
+        </div>
+    }
+    else
+    {
+        <div class="ogrenci deaktif">
+            <label>Öğrenci Numarası: @ogr.Id </label>
+            <h2>@ogr.Ad</h2>
+            <h4>Sınıfı: @ogr.Sinif </h4>
+            <br />
+            <label>Yaşı: @ogr.Yas </label>
+            <br>
+            <label style="color:white">Aktif olmayan öğrenci.</label>
+        </div>
+    }
 
-</div>
+
+  
+}
+
+
