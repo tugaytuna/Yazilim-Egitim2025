@@ -105,9 +105,6 @@ namespace ModelOrnek.Controllers
                 Yas = 20
             };
 
-        
-
-
 
 
             //Ogrenci ogrenci2 = new Ogrenci();
