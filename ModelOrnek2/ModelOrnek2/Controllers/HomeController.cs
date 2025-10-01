@@ -45,7 +45,7 @@ namespace ModelOrnek2.Controllers
                 AracId = 2,
                 Marka = "Toyota",
                 Model = "Corolla",
-                Yil = 2020,
+                Yil = 2021,
                 Vites = true,
                 GunlukKira = 750,
                 Kilometre = 45000,
@@ -62,7 +62,7 @@ namespace ModelOrnek2.Controllers
                 GunlukKira = 650,
                 Kilometre = 60000,
                 Hazir = true,
-                GorselUrl = "https://images.unsplash.com/photo-1717711081688-985a7a3e6a9f?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\r\n"
+                GorselUrl = "https://images.unsplash.com/photo-1683444112252-41c5ddf73815?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             new Arac
             {
@@ -74,7 +74,7 @@ namespace ModelOrnek2.Controllers
                 GunlukKira = 1200,
                 Kilometre = 30000,
                 Hazir = false,
-                GorselUrl = "https://images.unsplash.com/photo-1717711081688-985a7a3e6a9f?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\r\n"
+                GorselUrl = "https://images.unsplash.com/photo-1630357431823-4df30ae338b0?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             new Arac
             {
@@ -86,7 +86,7 @@ namespace ModelOrnek2.Controllers
                 GunlukKira = 500,
                 Kilometre = 80000,
                 Hazir = true,
-                GorselUrl = "https://images.unsplash.com/photo-1717711081688-985a7a3e6a9f?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\r\n"
+                GorselUrl = "https://images.unsplash.com/photo-1666335009164-2597314da8e7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             new Arac
             {
@@ -98,7 +98,7 @@ namespace ModelOrnek2.Controllers
                 GunlukKira = 1400,
                 Kilometre = 20000,
                 Hazir = true,
-                GorselUrl = "https://images.unsplash.com/photo-1717711081688-985a7a3e6a9f?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\r\n"
+                GorselUrl = "https://images.unsplash.com/photo-1584936684506-c3a7086e8212?q=80&w=2647&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }
         };
 

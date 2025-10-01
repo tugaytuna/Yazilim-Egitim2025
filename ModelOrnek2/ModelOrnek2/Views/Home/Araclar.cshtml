@@ -1,42 +1,100 @@
 ﻿@model List<Arac>
 
 
-
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
 @{
+
+    
 }
-
-
 
 
 <h1>Araçlar</h1>
 
 @foreach (Arac arc in Model)
 {
+    @if (arc.Hazir)
+    {
+        
     <div class="aracCard">
-        <img height="400" src="@arc.GorselUrl" />
+        <div class="arac-resim-div">
+            <img class="arac-resim" src="@arc.GorselUrl" />
+        </div>
         <div class="arac-info">
             <label>Araç ID: @arc.AracId</label>
-            <div class="Marka-model">
-                <label>@arc.Marka</label>
-                <label>@arc.Model</label>
+            <br />
+            <label class="markamy" >@arc.Marka</label>
+            <label class="markamy" >@arc.Model</label>
+            <label class="markamy" >@arc.Yil</label>
+            <br />
+            @if (arc.Vites)
+            {
+                <label class="vites">Otomatik</label>
+            }else
+            {
+                <label class="vites">Manuel</label>
+            }
+           
+            <br />
+           
+            <label class="kilometre">Kilometre: @arc.Kilometre km</label>
+            <br />
+            
+            @if (!arc.Hazir)
+            {
+                <label class="uygundegil">Araç kiralamaya uygun değildir.</label>
+            }
+
+            
+        </div>
+        <div class="fiyat-buton">
+            <label class="ucret">Günlük Kiralama Ücreti: @arc.GunlukKira TL</label>
+            <br />
+            <button>Seç</button>
+        </div>
+        </div>
+    }
+    else
+    {
+
+        <div class="aracCard aktifdegil">
+            <div class="arac-resim-div">
+                <img class="arac-resim" src="@arc.GorselUrl" />
             </div>
-            <label>@arc.Yil</label>
-            <div class="arac-ozellik">
-                <label class="vites">@arc.Vites</label>
+            <div class="arac-info ">
+                <label>Araç ID: @arc.AracId</label>
                 <br />
-                <label class="ucret">Günlük Kiralama Ücreti: @arc.GunlukKira TL</label>
+                <label class="markamy">@arc.Marka</label>
+                <label class="markamy">@arc.Model</label>
+                <label class="markamy">@arc.Yil</label>
                 <br />
+                @if (arc.Vites)
+                {
+                    <label class="vites">Otomatik</label>
+                }
+                else
+                {
+                    <label class="vites">Manuel</label>
+                }
+
+                <br />
+
                 <label class="kilometre">Kilometre: @arc.Kilometre km</label>
                 <br />
+
+                
+                    <label class="uygundegil">Araç kiralamaya uygun değildir.</label>
+                
+
+
             </div>
-            <label>Kiralamaya uygun mu? @arc.Hazir</label>
+            <div class="fiyat-buton">
+                <label class="ucret">Günlük Kiralama Ücreti: @arc.GunlukKira TL</label>
+                <br />
+               
+            </div>
         </div>
-    </div>
+    }
+
 
 }
-
 
 
