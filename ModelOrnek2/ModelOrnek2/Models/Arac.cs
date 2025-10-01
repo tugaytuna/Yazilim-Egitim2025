@@ -9,7 +9,7 @@
         public bool Vites { get; set; } // Otomatik Vites - True
         public int GunlukKira { get; set; } // Günlük Kiralama ücreti TL cinsinden
         public int Kilometre { get; set; } 
-        public bool Hazir { get; set; } // Kiralamaya uygun
+        public bool Hazir { get; set; } // Kiralamaya uygun - True
         public string GorselUrl { get; set; }
     }
 }

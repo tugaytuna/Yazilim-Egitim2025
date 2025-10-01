@@ -61,7 +61,7 @@ namespace ModelOrnek2.Controllers
                 Vites = false,
                 GunlukKira = 650,
                 Kilometre = 60000,
-                Hazir = true,
+                Hazir = false,
                 GorselUrl = "https://images.unsplash.com/photo-1683444112252-41c5ddf73815?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             new Arac
@@ -73,7 +73,7 @@ namespace ModelOrnek2.Controllers
                 Vites = true,
                 GunlukKira = 1200,
                 Kilometre = 30000,
-                Hazir = false,
+                Hazir = true,
                 GorselUrl = "https://images.unsplash.com/photo-1630357431823-4df30ae338b0?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             new Arac
