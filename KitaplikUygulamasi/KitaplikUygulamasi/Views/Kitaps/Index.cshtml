@@ -1,0 +1,59 @@
+﻿@model List<Kitap>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ad
+            </th>
+            <th>
+                Yazar
+            </th>
+            <th>
+                Sayfa Sayısı
+            </th>
+            <th>
+                Basım Yılı
+            </th>
+            <th>
+                Okundu
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (Kitap item in Model) {
+        <tr>
+            <td>
+                @item.Ad
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yazar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SayfaSayisi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BasimYili)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Okundu)
+            </td>
+            <td>
+                <a asp-controller="Kitaps" asp-action="Edit" asp-route-id="@item.KitapId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.KitapId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.KitapId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
