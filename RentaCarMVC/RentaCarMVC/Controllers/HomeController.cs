@@ -1,9 +1,8 @@
 using System.Diagnostics;
-using KitaplikUygulamasi.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RentaCarMVC.Models;
 
-namespace KitaplikUygulamasi.Controllers
+namespace RentaCarMVC.Controllers
 {
     public class HomeController : Controller
     {
@@ -19,7 +18,6 @@ namespace KitaplikUygulamasi.Controllers
             return View();
         }
 
-        
         public IActionResult Privacy()
         {
             return View();

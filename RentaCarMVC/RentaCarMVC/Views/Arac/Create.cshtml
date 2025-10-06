@@ -1,0 +1,68 @@
+﻿@model RentaCarMVC.Models.Arac
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Arac</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Marka" class="control-label"></label>
+                <input asp-for="Marka" class="form-control" />
+                <span asp-validation-for="Marka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Yil" class="control-label"></label>
+                <input asp-for="Yil" class="form-control" />
+                <span asp-validation-for="Yil" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Vites" /> @Html.DisplayNameFor(model => model.Vites)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="GunlukKira" class="control-label"></label>
+                <input asp-for="GunlukKira" class="form-control" />
+                <span asp-validation-for="GunlukKira" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kilometre" class="control-label"></label>
+                <input asp-for="Kilometre" class="form-control" />
+                <span asp-validation-for="Kilometre" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Hazir" /> @Html.DisplayNameFor(model => model.Hazir)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="GorselUrl" class="control-label"></label>
+                <input asp-for="GorselUrl" class="form-control" />
+                <span asp-validation-for="GorselUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

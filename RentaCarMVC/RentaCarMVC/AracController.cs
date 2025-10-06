@@ -5,71 +5,68 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using KitaplikUygulamasi.Data;
-using KitaplikUygulamasi.Models;
-using Microsoft.AspNetCore.Authorization;
+using RentaCarMVC.Data;
+using RentaCarMVC.Models;
 
-namespace KitaplikUygulamasi
+namespace RentaCarMVC
 {
-    public class KitapsController : Controller
+    public class AracController : Controller
     {
-        private readonly KitaplikUygulamasiContext _context;
+        private readonly RentaCarMVCContext _context;
 
-        public KitapsController(KitaplikUygulamasiContext context)
+        public AracController(RentaCarMVCContext context)
         {
             _context = context;
         }
 
-        // GET: Kitaps
-
-        [Authorize]
+        // GET: Arac
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Kitap.ToListAsync());
+            return View(await _context.Arac.ToListAsync());
         }
 
-        // GET: Kitaps/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // GET: Arac/Details/5
+        public async Task<IActionResult> Details(int? AracId)
         {
-            if (id == null)
+            if (AracId == null)
             {
                 return NotFound();
             }
 
-            var kitap = await _context.Kitap
-                .FirstOrDefaultAsync(m => m.KitapId == id);
+            var arac = await _context.Arac
+                .FirstOrDefaultAsync(m => m.AracId == AracId);
 
-            if (kitap == null)
+            if (arac == null)
             {
                 return NotFound();
             }
 
-            return View(kitap);
+            return View(arac);
         }
 
-        // GET: Kitaps/Create
+        // GET: Arac/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Kitaps/Create
+        // POST: Arac/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("KitapId,Ad,Yazar,SayfaSayisi,BasimYili,Okundu")] Kitap kitap)
+        public async Task<IActionResult> Create([Bind("AracId,Marka,Model,Yil,Vites,GunlukKira,Kilometre,Hazir,GorselUrl")] Arac arac)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(kitap);
+                _context.Add(arac);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(kitap);
+            return View(arac);
         }
 
-        // GET: Kitaps/Edit/5
+        // GET: Arac/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -77,24 +74,22 @@ namespace KitaplikUygulamasi
                 return NotFound();
             }
 
-            var kitap = await _context.Kitap.FindAsync(id);
-
-            if (kitap == null)
+            var arac = await _context.Arac.FindAsync(id);
+            if (arac == null)
             {
                 return NotFound();
             }
-
-            return View(kitap);
+            return View(arac);
         }
 
-        // POST: Kitaps/Edit/5
+        // POST: Arac/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("KitapId,Ad,Yazar,SayfaSayisi,BasimYili,Okundu")] Kitap kitap)
+        public async Task<IActionResult> Edit(int id, [Bind("AracId,Marka,Model,Yil,Vites,GunlukKira,Kilometre,Hazir,GorselUrl")] Arac arac)
         {
-            if (id != kitap.KitapId)
+            if (id != arac.AracId)
             {
                 return NotFound();
             }
@@ -103,12 +98,12 @@ namespace KitaplikUygulamasi
             {
                 try
                 {
-                    _context.Update(kitap);
+                    _context.Update(arac);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!KitapExists(kitap.KitapId))
+                    if (!AracExists(arac.AracId))
                     {
                         return NotFound();
                     }
@@ -119,10 +114,10 @@ namespace KitaplikUygulamasi
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(kitap);
+            return View(arac);
         }
 
-        // GET: Kitaps/Delete/5
+        // GET: Arac/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -130,34 +125,34 @@ namespace KitaplikUygulamasi
                 return NotFound();
             }
 
-            var kitap = await _context.Kitap
-                .FirstOrDefaultAsync(m => m.KitapId == id);
-            if (kitap == null)
+            var arac = await _context.Arac
+                .FirstOrDefaultAsync(m => m.AracId == id);
+            if (arac == null)
             {
                 return NotFound();
             }
 
-            return View(kitap);
+            return View(arac);
         }
 
-        // POST: Kitaps/Delete/5
+        // POST: Arac/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var kitap = await _context.Kitap.FindAsync(id);
-            if (kitap != null)
+            var arac = await _context.Arac.FindAsync(id);
+            if (arac != null)
             {
-                _context.Kitap.Remove(kitap);
+                _context.Arac.Remove(arac);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool KitapExists(int id)
+        private bool AracExists(int id)
         {
-            return _context.Kitap.Any(e => e.KitapId == id);
+            return _context.Arac.Any(e => e.AracId == id);
         }
     }
 }
