@@ -1,66 +1,81 @@
-﻿@model RentaCarMVC.Models.Arac
+﻿@model Arac
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Detaylar</h1>
 
 <div>
     <h4>Arac</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Marka)
+            Marka
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Marka)
+            @Model.Marka
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Model)
+            Model
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Model)
+            @Model.Model
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Yil)
+            Yıl
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Yil)
+            @Model.Yil
+           
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Vites)
+            Vites
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Vites)
+            @if(Model.Vites){
+                <p>Otomatik</p>
+            }
+            else
+            {
+                <p>Manuel</p>
+            }
+            
+            
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GunlukKira)
+            Günlük Kiralama Ücreti
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GunlukKira)
+            @Model.GunlukKira
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Kilometre)
+            Kilometre
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Kilometre)
+            @Model.Kilometre
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Hazir)
+            Kiralamaya Uygun
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Hazir)
+           
+
+            @if(Model.Hazir)
+            {
+                <p>Uygun</p>
+            }
+            else
+            {
+                <p>Uygun değildir.</p>
+            }
+
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GorselUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GorselUrl)
-        </dd>
+      
     </dl>
+    <img width="400" src="@Model.GorselUrl" />
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.AracId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model?.AracId">Düzenle</a> |
+    <a class="btn btn-primary" asp-action="Index">Geri Dön</a>
 </div>

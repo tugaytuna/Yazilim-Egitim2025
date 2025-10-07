@@ -47,9 +47,9 @@
             <div class="fiyat-buton">
                 <label class="ucret">Günlük Kiralama Ücreti: @arc.GunlukKira TL</label>
                 <br />
-                <a asp-action="details" asp-route-AracId="@arc.AracId" class="btn btn-primary" >Detaylar</a>
+                <a asp-controller="Arac"  asp-action="details" asp-route-AracId="@arc.AracId" class="btn btn-primary" >Detaylar</a>
                 <a class="btn btn-warning" >Düzenle</a>
-                <a class="btn btn-danger">Sil</a>
+                <a asp-action="Delete" asp-route-id="@arc.AracId" class="btn btn-danger">Sil</a>
             </div>
         </div>
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,7 @@ namespace RentaCarMVC
         }
 
         // GET: Arac
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Arac.ToListAsync());
@@ -30,7 +32,7 @@ namespace RentaCarMVC
         {
             if (AracId == null)
             {
-                return NotFound();
+                return RedirectToAction("Index");
             }
 
             var arac = await _context.Arac
@@ -38,7 +40,8 @@ namespace RentaCarMVC
 
             if (arac == null)
             {
-                return NotFound();
+                return RedirectToAction("Index");
+                //return View("Index");
             }
 
             return View(arac);
@@ -87,7 +90,7 @@ namespace RentaCarMVC
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AracId,Marka,Model,Yil,Vites,GunlukKira,Kilometre,Hazir,GorselUrl")] Arac arac)
+        public async Task<IActionResult> Edit(int id, Arac arac)
         {
             if (id != arac.AracId)
             {
