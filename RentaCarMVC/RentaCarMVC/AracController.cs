@@ -22,9 +22,31 @@ namespace RentaCarMVC
 
         // GET: Arac
         [Authorize]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(bool kk)
         {
-            return View(await _context.Arac.ToListAsync());
+            List<Arac> araclar = await _context.Arac.ToListAsync();
+            List<Arac> otoArac = new List<Arac>();
+          
+            foreach (Arac arac in araclar)
+            {
+                if (arac.Vites)
+                {
+                    otoArac.Add(arac);
+                }
+            }
+
+            if (kk)
+            {
+                return View(otoArac);
+            }
+            else
+            {
+                return View(araclar);
+            }
+
+
+            //return View(_context.Arac.ToList());
+
         }
 
         // GET: Arac/Details/5
@@ -32,7 +54,8 @@ namespace RentaCarMVC
         {
             if (AracId == null)
             {
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return View("~/Views/Home/Index.cshtml");
             }
 
             var arac = await _context.Arac
@@ -75,6 +98,7 @@ namespace RentaCarMVC
             if (id == null)
             {
                 return NotFound();
+            
             }
 
             var arac = await _context.Arac.FindAsync(id);
