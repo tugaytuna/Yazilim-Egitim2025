@@ -35,6 +35,14 @@ namespace FirstApi.Controllers
             return Ok(urunler);
         }
 
+
+        [HttpGet("Tugay")]
+        public string GetTugay()
+        {
+            return urunler[1].UrunAdi;
+            //return "Merhaba";
+        }
+
         [HttpGet("{id}")]
         public IActionResult UrunlerId(int id) {
 
@@ -56,6 +64,7 @@ namespace FirstApi.Controllers
             }
                 var result = new { Urunismi = urun1.UrunAdi.ToUpper(), Stok = stokDegeri };
             return Ok(result);
+            //return Ok(urun1);
         }
 
 
