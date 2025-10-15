@@ -68,6 +68,24 @@ namespace FirstApi.Controllers
         }
 
 
+        [HttpGet("Stok/{id}")]
+        public IActionResult StokKontrol(int id)
+        {
+
+            var urun1 = urunler.FirstOrDefault(u => u.UrunId == id);
+            // Eğer ilgili id'de ürün yoksa geriye olmadığını döndür
+            if (urun1 == null)
+            {
+                return NotFound("Ürün bulunamadı");
+            }
+
+            
+           
+            return Ok(urun1.StokAdet);
+            //return Ok(urun1);
+        }
+
+
 
         [HttpGet("jsonDeger")]
         public IActionResult GetJsonDeger()
